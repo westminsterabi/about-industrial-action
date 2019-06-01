@@ -7,7 +7,7 @@
 # Jekyll basic configurations
 #
 source:         _app
-destination:    _site
+destination:    docs
 timezone:       America/Los_Angeles
 permalink:      /:title.html
 markdown:       kramdown
@@ -66,7 +66,7 @@ dev:            false
 # Site name
 #
 # Default:      Almace Scaffolding
-name:           Almace Scaffolding
+name:           A Primer on Industrial Action
 
 # Site short name
 #
@@ -82,7 +82,7 @@ name:           Almace Scaffolding
 # - name_short: Sparanoid
 #
 # Default:      AMSF
-name_short:     AMSF
+name_short:     Industrial Action Primer
 
 # Site description
 #
@@ -99,7 +99,7 @@ description:    Super-fast Jekyll framework
 # `/my-project`, without trailing slash.
 #
 # Default:      ""
-baseurl:        /lab/amsf
+baseurl:       /about-industrial-action
 
 # Flatten base
 #
@@ -109,7 +109,7 @@ baseurl:        /lab/amsf
 # enable this option if you're using GitHub Pages.
 #
 # Default:      false
-flatten_base:   false
+flatten_base:   true
 
 # CSS path used in templates
 #

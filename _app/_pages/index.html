@@ -24,28 +24,10 @@ thumb_force_logo: true
 
   <div class="page-content">
     <h2>Getting Started</h2>
-    {% for post in site.tags.getting-started %}
+    {% for post in site.tags.faq %}
       {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
     {% endfor %}
 
-    <h2>Customization</h2>
-    {% for post in site.tags.customization %}
-      {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
-    {% endfor %}
 
-    <h2>Theme Curtana</h2>
-    {% for post in site.tags.curtana %}
-      {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
-    {% endfor %}
-
-    <h2>Deployment</h2>
-    {% for post in site.tags.deployment %}
-      {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
-    {% endfor %}
-
-    <h2>Miscellaneous</h2>
-    {% for post in site.tags.miscellaneous %}
-      {%- include themes/{{ site.amsf_theme }}/includes/page-item.html -%}
-    {% endfor %}
   </div>
 </article>

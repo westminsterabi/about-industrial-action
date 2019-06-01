@@ -1,0 +1,125 @@
+[
+
+
+  
+    
+    {
+      "title": "Glossary",
+      "permalink": "http://0.0.0.0:4321/github-pages-setup.html",
+      "link": "http://0.0.0.0:4321/github-pages-setup.html",
+      "date": "2019-06-01T00:00:00-07:00",
+      
+        "modified": "2019-06-01T15:50:59-07:00",
+      
+      "author": {
+        "name": "Tunghsiao Liu",
+        "url": "https://sparanoid.com/",
+        "email": "t@sparanoid.com"
+      },
+      "content": "<h1 id=\"some-words-you-should-know\">Some words you should know</h1>\n<p>I haven’t alphabetized these. Instead I’ve tried to hierarchize them, so that you won’t encounter a term you don’t already know as you go down the page.</p>\n\n<p>##Union\n A trade union (also sometimes called a labor union or just a <em>union</em>) is a group of workers in the same industry who work together to improve their conditions.</p>\n\n<p><a href=\"https://www.britannica.com/topic/trade-union\">Encyclopedia Britannica</a> on the definition of a union</p>\n\n<p>##Collective Bargaining\nCollective bargaining is the process of negotiations between people who represent workers and people who represent their employers. Some of the things they might negotiate include hiring practices, promotions, pay, and working hours, to name but a few.</p>\n\n<p><a href=\"https://www.britannica.com/topic/collective-bargaining\">Encyclopedia Britannica</a> on collective bargaining</p>\n\n<h2 id=\"strike\">Strike</h2>\n<p>A strike is when a group of employees refuse to work. Often a strike is used as leverage in negotiations with employers, or sometimes the government.</p>\n\n<p>A strike is not spontaneous. Normally, all members of the union calling for a strike will vote on whether they want to strike or not. If the majority wins, the strike is planned in advance. The members who voted against are normally also required to participate in the strike.</p>\n\n<p><a href=\"https://www.britannica.com/topic/strike-industrial-relations\">Encylopedia Britannica</a> on strikes</p>\n\n<p>##Walkout\nAs opposed to a strike, a walkout is often spontaneous. The union doesn’t always vote on whether or not to walk out. In the case of a strike, they will nearly always vote.</p>\n\n<p>Sometimes the words “strike” and “walkout” are used interchangeably to refer to a situation, but the words on their own mean different things.</p>\n\n<h2 id=\"picket\">Picket</h2>\n<p>To picket is to stand outside a building to prevent other workers from going inside. In the context of a strike, it is often used to enforce the strike. As a noun, “picket” refers to the groups of people engaging in this activity.</p>\n\n<p><a href=\"https://dictionary.cambridge.org/us/dictionary/english/picket\">Cambridge Dictionary</a> on picketing.</p>\n\n<p>##Picket line\nA picket line is the metaphorical line drawn at the picket in front of the place of work.</p>\n\n<h2 id=\"labor-dispute\">Labor dispute</h2>\n<p>A disagreement between and employer and employees about anything related to the work, or with regards to the process of collective bargaining itself.</p>\n\n<p><a href=\"https://thelawdictionary.org/labor-dispute/\">The Law Dictionary</a> on labor disputes.</p>\n\n<h2 id=\"dues\">Dues</h2>\n\n<h2 id=\"closed-shop\">Closed shop</h2>\n<p>A place of employment where all employees must belong to a union. Closed shops are illegal in the United States. In many contracts, however, non-union employees will pay an “agency” fee, since they also benefit from the bargaining done by the union.</p>",
+      "excerpt": "Some words you should know\nI haven’t alphabetized these. Instead I’ve tried to hierarchize them, so that you won’t encounter a term you don’t already know as you go down the page.",
+      "languages": null,
+      "categories": ["notes"],
+      "tags": ["faq"]
+    }
+    
+  
+
+  
+    ,
+    {
+      "title": "Upgrading Guide from v1 to v2",
+      "permalink": "http://0.0.0.0:4321/upgrading-from-v1-to-v2.html",
+      "link": "http://0.0.0.0:4321/upgrading-from-v1-to-v2.html",
+      "date": "2018-07-23T00:00:00-07:00",
+      
+        "modified": "2018-10-18T04:01:48-07:00",
+      
+      "author": {
+        "name": "Tunghsiao Liu",
+        "url": "https://sparanoid.com/",
+        "email": "t@sparanoid.com"
+      },
+      "content": "<p>Almace Scaffolding now migrates from Less to Sass, this may make your existing projects non-upgradable, it need quite a lot of work for you to do the migration if you use a custom theme that it’s powered by Less preprocessor. You have to compare your existing projects to <a href=\"https://github.com/sparanoid/almace-scaffolding/pull/85\">this Pull Request</a> side to side to make sure every change you made are sync’ed correctly.</p>\n\n<p>If you’re a casual blogger only change some color variables for your default theme, Curtana in this situation, that’s good, you can migrate to v2 easier: just run <code class=\"highlighter-rouge\">$ grunt update</code>.</p>\n\n<p>You should also migrate your own styles in <code class=\"highlighter-rouge\">user.less</code> to <code class=\"highlighter-rouge\">_user.scss</code> and <code class=\"highlighter-rouge\">_varaibles.scss</code>. Due to Sass limitation, I don’t have variable hoisting feature like native CSS or Less at hand, so I have to create two user defined stylesheets:</p>\n\n<ul>\n  <li><code class=\"highlighter-rouge\">assets/_scss/_variables.scss</code> - This file should contain only Sass variables defined in theme Curtana. It will be loaded at the topmost of theme stylesheet <code class=\"highlighter-rouge\">app.scss</code>.</li>\n  <li><code class=\"highlighter-rouge\">assets/_scss/_user.scss</code> - where users create style customization.</li>\n</ul>\n\n<p>From 2.0.0, Almace Scaffolding still has the ability to use Less with Grunt.js, however it’s wise to write your theme in Sass for better future compatibility.</p>\n\n<p>If you’d like to stick with the Less version:</p>\n\n<ul>\n  <li>v1.1.11 will be the last version that supports Less.</li>\n  <li>Less version of theme Curtana will be avaiable as <code class=\"highlighter-rouge\">amsf/amsf-curtana-less</code>.</li>\n</ul>",
+      "excerpt": "Almace Scaffolding now migrates from Less to Sass, this may make your existing projects non-upgradable, it need quite a lot of work for you to do the migration if you use a custom theme that it’s powered by Less preprocessor. You have to compare your existing projects to this Pull Request side to side to make sure every change you made are sync’ed correctly.",
+      "languages": null,
+      "categories": ["news"],
+      "tags": []
+    }
+    
+  
+
+  
+    ,
+    {
+      "title": "Upgrading Guide: v1.1.0",
+      "permalink": "http://0.0.0.0:4321/upgrading-guide-v1.1.0.html",
+      "link": "http://0.0.0.0:4321/upgrading-guide-v1.1.0.html",
+      "date": "2017-01-07T00:00:00-08:00",
+      
+        "modified": "2017-01-10T19:17:09-08:00",
+      
+      "author": {
+        "name": "Tunghsiao Liu",
+        "url": "https://sparanoid.com/",
+        "email": "t@sparanoid.com"
+      },
+      "content": "<p>There’re some significant changes in update v1.1.0, action required after you upgrade Almace Scaffolding.</p>\n\n<p>In your front-matter fields:</p>\n\n<ul>\n  <li>Replace all <code class=\"highlighter-rouge\">svg-headline</code>, <code class=\"highlighter-rouge\">img-headline</code> with <code class=\"highlighter-rouge\">heading-img</code>.</li>\n  <li>Replace all <code class=\"highlighter-rouge\">svg-headline-width</code>, <code class=\"highlighter-rouge\">img-headline-width</code> with <code class=\"highlighter-rouge\">heading-img-width</code>.</li>\n  <li>Remove all <code class=\"highlighter-rouge\">svg-headline-height</code>, <code class=\"highlighter-rouge\">img-headline-height</code> as they’re deprecated and no longer available.</li>\n  <li>Add <code class=\"highlighter-rouge\">heading-img-local: true</code> if images are stored right inside your project.</li>\n</ul>\n\n<p>Check the following front-matter data for post thumbnails:</p>\n\n<ul>\n  <li>Replace all <code class=\"highlighter-rouge\">thumb</code> with <code class=\"highlighter-rouge\">thumbnail</code>.</li>\n  <li>Add <code class=\"highlighter-rouge\">thumb/</code> prefix to your filename, ie. <code class=\"highlighter-rouge\">thumbnail: thumb/my-post.png</code>.</li>\n  <li>Add <code class=\"highlighter-rouge\">thumbnail-local: true</code> if thumbnails are stored right inside your project.</li>\n</ul>",
+      "excerpt": "There’re some significant changes in update v1.1.0, action required after you upgrade Almace Scaffolding.",
+      "languages": null,
+      "categories": ["news"],
+      "tags": []
+    }
+    
+  
+
+  
+    ,
+    {
+      "title": "Jekyll Theme Compatibility",
+      "permalink": "http://0.0.0.0:4321/jekyll-theme-compatibility.html",
+      "link": "http://0.0.0.0:4321/jekyll-theme-compatibility.html",
+      "date": "2016-11-07T00:00:00-08:00",
+      
+        "modified": "2017-01-05T02:59:05-08:00",
+      
+      "author": {
+        "name": "Tunghsiao Liu",
+        "url": "https://sparanoid.com/",
+        "email": "t@sparanoid.com"
+      },
+      "content": "<p>With recent release of Jekyll, it gets the built-in ability to support <a href=\"https://jekyllrb.com/docs/themes/\">themes</a>, since we’ve already added theme support in 2015, the original config variables <code class=\"highlighter-rouge\">theme</code> would be conflicted with the built-in one.</p>\n\n<p>To solve this issue, I’ve rename our <code class=\"highlighter-rouge\">theme</code> option to <code class=\"highlighter-rouge\">amsf_theme</code>. And here’s what you need to do to resovle compatibility issues after upgrading to latest Almace Scaffolding:</p>\n\n<ul>\n  <li>Rename your original <code class=\"highlighter-rouge\">theme</code> option in <code class=\"highlighter-rouge\">_amsf.yml</code> to <code class=\"highlighter-rouge\">amsf_theme</code>.</li>\n  <li>Add <code class=\"highlighter-rouge\">amsf_theme_url</code> with your theme Git URL.</li>\n  <li>Replace all <code class=\"highlighter-rouge\">site.theme</code> with <code class=\"highlighter-rouge\">site.amsf_theme</code> in your page templates.</li>\n</ul>",
+      "excerpt": "With recent release of Jekyll, it gets the built-in ability to support themes, since we’ve already added theme support in 2015, the original config variables theme would be conflicted with the built-in one.",
+      "languages": null,
+      "categories": ["news"],
+      "tags": []
+    }
+    
+  
+
+  
+    ,
+    {
+      "title": "Multiple Themes Support",
+      "permalink": "http://0.0.0.0:4321/multiple-themes-support.html",
+      "link": "http://0.0.0.0:4321/multiple-themes-support.html",
+      "date": "2015-08-18T00:00:00-07:00",
+      
+        "modified": "2017-01-20T01:00:20-08:00",
+      
+      "author": {
+        "name": "Tunghsiao Liu",
+        "url": "https://sparanoid.com/",
+        "email": "t@sparanoid.com"
+      },
+      "content": "<p>From version 0.0.31, you can now use multiple themes in Almace Scaffolding. See <a href=\"/themes.html\">Themes</a> for more information.</p>",
+      "excerpt": "From version 0.0.31, you can now use multiple themes in Almace Scaffolding. See Themes for more information.",
+      "languages": null,
+      "categories": ["news"],
+      "tags": []
+    }
+    
+  
+
+
+]
